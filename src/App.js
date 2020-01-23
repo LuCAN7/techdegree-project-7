@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   handleSearch = (query) => {
-
+    // Place interpolate stirng into a string
     const URL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&tags=${query}&content_type=1&per_page=24&format=json&nojsoncallback=1`;
      
     fetch(URL)
