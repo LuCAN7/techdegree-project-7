@@ -13,10 +13,8 @@ const Nav = (props) => {
           <li><NavLink to="/Computers" onClick={() => props.onSearch('computers')} >Computers</NavLink></li>
         </ul>     
       </nav>
-
     </div>
-
-  );
+  )
 }
 
 export default withRouter(Nav);

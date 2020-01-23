@@ -13,7 +13,6 @@ class App extends Component {
     this.state = {
       isLoading: true,
       query: null,
-      // url: null,
       imgs: []
     };
    
@@ -36,14 +35,12 @@ class App extends Component {
           this.setState({
           isLoading: false,
           query: query,
-          url: URL,
           imgs: data.photos.photo
         })
       })
       .catch((error) => {
         console.log('Oops...Something went wrong!', error.message);
-      })   
-      
+      })  
   }
 
 
@@ -65,7 +62,7 @@ class App extends Component {
   
           <Route path="/search/:id" render={(props) => <Gallery onSearch={this.handleSearch} data={this.state.imgs} query={this.state.query} loading={this.state.isLoading} {...props}/> }/> 
          
-          <Route render={ () => <NotFound />} />
+          <Route render={() => <NotFound />} />
         </Switch>
         
       </div>

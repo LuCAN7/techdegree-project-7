@@ -8,8 +8,7 @@ const Photo = (props) => {
       {/* <img src={`https://farm${farmID}.staticflickr.com/${serverID}/${id}_${secret}.jpg`} alt="Search Images" /> */}
       <img src={props.url} alt="Search Images" />
    </li>
-  );
- 
+  )
 }
 
 export default Photo;
